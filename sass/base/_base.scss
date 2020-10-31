@@ -55,6 +55,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
+
 article > * + * {
   margin-top: 1em;
 }
@@ -77,10 +78,147 @@ select {
   }
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@500;700&display=swap');
+html {
+  font-size: 62.5%;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-main;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-family: $font-heading;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $font-heading;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    background: $brand-primary;
+    bottom: 0;
+    content: '';
+    height: 0.3rem;
+    position: absolute;
+    width: 4rem;
+  }
+
+  @media screen and ( min-width: $md ) {
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+
+    &::before {
+      height: 5px;
+      width: 6rem;
+    }
+  }
+}
+
+h3 {
+  font-family: $font-heading;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 3.4rem;
+
+  @media screen and ( min-width: $md ) {
+    font-size: 1.8rem;
+  }
+}
+
+.btn {
+  background: $brand-primary;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0px 0px 20px 0px rgba(38,35,32,0);
+  color: $white;
+  cursor: pointer;
+  displaY: block;
+  font-family: $font-heading;
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  max-width: 450px;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  transform: scale(1,1);
+  transition: transform 125ms ease, box-shadow 125ms ease;
+  width: 100%;
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 20px 0px rgba(38,35,32,0.3);
+    transform: scale(1.03, 1.03);
+  }
+
+  &:focus {
+    outline: 2px solid $dark-gray;
+    outline-offset: 1px;
+    bordeR: none;
+  }
+}
+
+fieldset {
+  border: none;
+  margin: 2rem 0 0 0;
+  padding: 0;
+}
+
+.contact_form {
+  max-width: 530px;
+  padding: 2rem;
+  width: 100%;
+
+  @media screen and ( min-width: $md ) {
+    font-size: 1.8rem;
+    padding: 4rem;
+  }
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+}
+
+input {
+  border: 1px solid $border-color;
+  border-bottom: 3px solid $dark-gray;
+  border-radius: 0;
+  displaY: block;
+  height: 4rem;
+  transition: border 125ms ease;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $brand-primary;
+    border-bottom: 3px solid $brand-primary;
+  }
+}
+
+textarea {
+  border: 1px solid $border-color;
+  border-bottom: 3px solid $dark-gray;
+  border-radius: 0;
+  displaY: block;
+  height: 4rem;
+  min-height: 185px;
+  transition: border 125ms ease;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $brand-primary;
+    border-bottom: 3px solid $brand-primary;
+  }
 }
