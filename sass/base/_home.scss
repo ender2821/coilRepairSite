@@ -1,0 +1,72 @@
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero {
+    background: url('/images/hero-mobile.jpg') top left no-repeat;
+    background-size: cover;
+    height: 350px;
+    padding: 0 20px;
+    position: relative;
+
+    h1 {
+        color: $white;
+        font-size: 6.6rem;
+        line-height: 7.7rem;
+        margin-left: -0.3rem;
+        margin-top: -1.4rem;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .sub_header {
+        border: 1px solid $white;
+        color: $white;
+        margin-top: 1.2rem;
+        padding: 0.4rem 1.4rem;
+        position: relative;
+    }
+
+    .image-container {
+
+    }
+    
+    @media screen and ( min-width: $md ) {
+        background: url('/images/hero.jpg') top left no-repeat;
+        background-size: cover;
+        height: 700px;
+        margin-bottom: 236px;
+
+        h1 {
+            font-size: 17.8rem;
+            line-height: 18.5rem;
+            margin-bottom: -2rem;
+            margin-left: 1rem;
+            margin-top: -2.9rem;
+        }
+
+        .sub_header {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            padding: 1.4rem 2.4rem;
+            position: absolute;
+            right: 0;
+            top: 225px;
+            width: 430px;
+        }
+
+        .images {
+            display: flex;
+        }
+
+        .image-container {
+            flex: 1 0 50%;
+        }
+    }
+}
