@@ -148,7 +148,7 @@ p {
   font-family: $font-heading;
   font-size: 2.4rem;
   margin-top: 2rem;
-  max-width: 450px;
+  max-width: 500px;
   padding: 0.5em;
   text-align: center;
   text-decoration: none;
@@ -222,5 +222,22 @@ textarea {
     outline: none;
     border: 1px solid $brand-primary;
     border-bottom: 3px solid $brand-primary;
+  }
+}
+
+footer {
+  background: $dark-gray;
+  padding: 2rem;
+
+  p {
+    color: $white;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+
+    .orange {
+      color: $brand-primary;
+    }
   }
 }

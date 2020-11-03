@@ -228,3 +228,242 @@
         }
     }
 }
+
+.before_after_text {
+    background: $brand-primary;
+    position: relative;
+
+    .container {
+        padding: 4rem 2rem;
+    }
+
+    h2 {
+        color: $white;
+
+        &::before {
+            background: $white;
+        }
+    }
+
+    p {
+        color: $white;
+        margin: 0 auto 2rem auto;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    @media screen and ( min-width: $md ) {
+        .container {
+            padding: 12rem 2rem 24rem 2rem;
+        }
+    }
+
+    @media screen and ( min-width: 1750px ) {
+        .side_image {
+            background: url('/images/clamshellCoil.png') top left no-repeat;
+            background-size: contain;
+            filter: drop-shadow(8px 8px 20px rgba( 38, 35, 32, 0.5 ));
+            height:600px;
+            left: 0;
+            position: absolute;
+            top: -49px;
+            width: 600px;
+        }
+    }
+}
+
+.before_after_images {
+    .container {
+        padding: 0 2rem 4rem 2rem;
+    }
+
+    .img_contain {
+        box-shadow: 0 3px 40px rgba( 38, 35, 32, 0.2 );
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        position: relative;
+
+        img {
+            flex: 1 0 100%;
+            display: block;
+        }
+    }
+
+    .title {
+        background: rgb(219,106,52);
+        background: linear-gradient(90deg, rgba(219,106,52,1) 0%, rgba(219,106,52,0.8) 100%);
+        color: $white;
+        display: block;
+        bottom: 0;
+        padding: 1rem 2rem;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .quote {
+        display: none;
+    }
+
+    .seventy_five_text {
+        margin-top: 4rem;
+
+        p {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 3.8rem;
+        }
+
+        .orange {
+            color: $brand-primary;
+        }
+
+        .underline {
+            color: $brand-primary;
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and ( min-width: $md ) {
+        
+        .container {
+            padding: 0 2rem 12rem 2rem;
+        }
+
+        .img_contain {
+            &:first-child {
+                margin-top: -20rem;
+            }
+
+            img {
+                flex: 1 0 50%;
+                width: 50%;
+            }
+        }
+
+        .seventy_five_text {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 12rem;
+
+            p {
+                font-size: 4.8rem;
+                line-height: 5.5rem;
+                margin-top: 5rem;
+            }
+        }
+
+        .quote {
+            background: $brand-primary;
+            border-radius: 50%;
+            height: 15rem;
+            margin-right: 20px;
+            position: relative;
+            width: 15rem;
+
+            span {
+                color: $white;
+                font-size: 19.5rem;
+                left: 50%;
+                line-height: 0;
+                position: absolute;
+                top: 85%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+.new_coils {
+    background: $dark-gray;
+    color: $white;
+
+    p {
+        display: block;
+        font-weight: 700;
+        margin: 0 auto 4rem auto;
+        max-width: 800px;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .container {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+
+    .gallery {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .img {
+        box-shadow: 0 3px 40px rgba( 0, 0, 0, 1 );
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @media screen and ( min-width: $md ) {
+        .container {
+            padding: 12rem 0 12rem 0;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        .gallery {
+            grid-gap: 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .gallery_button {
+            margin: 3rem auto 0 auto;
+            max-width: 380px;
+
+            &:hover, &:focus {
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}
+
+.contact {
+    position: relative;
+
+    .container {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+
+    .contact_form {
+        padding: 0;
+    }
+
+    @media screen and ( min-width: $md ) {
+
+
+        .container {
+            padding: 12rem 0 12rem 0;
+        }
+        .contact_form {
+            box-shadow: 0px 0px 20px 0px rgba(38,35,32,0.2);
+            margin: 0 auto;
+            padding: 4rem;
+        }
+    }
+
+    @media screen and ( min-width: 1750px) {
+        .side_image {
+            background: url('/images/footerCoil.png') top left no-repeat;
+            position: absolute;
+            right: 5%;
+            bottom: -7.4rem;
+            height: 800px;
+            width: 310px;
+        }
+    }
+}
